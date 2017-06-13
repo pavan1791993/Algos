@@ -1,0 +1,13 @@
+package sort;
+
+public interface Sort {
+	
+	<T extends Comparable<T>> void sort(T[] values);
+	
+	default <T> void swap(T[] elements, int first, int second){
+		T temp=elements[first];
+		elements[first]=elements[second];
+		elements[second]=temp;
+	}
+
+}
